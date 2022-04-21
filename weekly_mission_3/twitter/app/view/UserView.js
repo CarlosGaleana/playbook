@@ -11,8 +11,18 @@ class UserView{
             
             return new error()
         }
-        else
+        else if(user.username == null || user.name == null || user.id ==null){
+            class error1 {
+                constructor(){
+                    this.error = "necesitan tener un valor válido"
+                }
+            }
+            return new error1()
+        }   
+        else{
             return new User(user.id,user.username,user.name,"Sin bio")
+        }
+             
     }
     static getInfo(user){
         let user2= [user.id,user.username,user.name,user.bio] 
