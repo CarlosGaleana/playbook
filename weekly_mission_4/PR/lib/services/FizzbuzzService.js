@@ -1,0 +1,25 @@
+class FizzbuzzService {
+    static applyValidationInExplorer(explorer){
+        if(explorer.score%5 === 0 && explorer.score%3 === 0){
+            explorer.trick = "FIZZBUZZ";
+            console.log("FIZZBUZZ")
+            return explorer
+        }
+        else if(explorer.score%3 === 0){
+            explorer.trick = "FIZZ";
+            console.log("FIZZ")
+            return explorer
+        }
+        else if(explorer.score%5 === 0){
+            explorer.trick = "BUZZ";
+            console.log("BUZZ")
+            return explorer
+        }
+        else{
+            explorer.trick = explorer.score;
+            console.log(explorer.score)
+            return explorer
+        }
+    }
+}
+module.exports = FizzbuzzService
